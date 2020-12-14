@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Exchange DB Summary Report</title>
+<script src="../Scripts/sorttable.js"></script></head>
+<style>
+			div.container {width: 80%; border: 1px solid gray; margin: auto;}
+			div.header {background-color:#b5dcb3;}
+			div.leftSection {background-color:#ffffff; height:auto;width:25%;float:left;}
+			div.mainHeaderSection {background-color:#D4DFDA; height:auto; width:73%; float:right;}
+			
+			div.DB_TO_DISK_SUBSYSTEM {background-color:#D4DFDA; height: auto; width:90%; display: block; margin-left: auto; margin-right: auto;  overflow: scroll;}
+			div.active_DBS  {background-color:#afdec9; height:auto; width:90%; display: block; margin-left: auto; margin-right: auto;  overflow: scroll;}
+			div.passive_DBS  {background-color:#c1dde3; height:auto; width:90%; display: block; margin-left: auto; margin-right: auto;  overflow: scroll;}
+			div.replication_Results {background-color:#b6c9e3; height:auto; width:90%; display: block; margin-left: auto; margin-right: auto;  overflow: scroll;}
+			
+			div.mainSection {background-color:#D4DFDA; height:auto; width:90%; display: block; margin-left: auto; margin-right: auto;  overflow: scroll;}
+			
+			div.footer {background-color:#b5dcb3; height:auto; width:100%;}
+			header, footer {padding: 1em; clear: left;text-align: center;}
+			nav {float: left;max-width: 160px;margin: 0;padding: 1em;}
+			nav ul {list-style-type: none;padding: 0;}
+			nav ul a {text-decoration: none;}
+			article {margin-left: 170px; border-left: 1px solid gray;padding: 1em;overflow: hidden;}
+			th.noPing {background-color: #AD2A1A; font-weight: #ffffff;}
+			th.subTotals {background-color: #43ABC9; font-weight: #ffffff;}
+			th.summary {background-color: #107896; font-weight: #ffffff;}
+			
+			td.unhealthy {background-color: #ff3347;}
+			td.healthy {background-color: #33ffb1;}
+			
+			caption {font-weight: bold;}
+			h2.DB_Header_Focus {text-align: center;font-size: 2em; margin-left: 0; margin-right: 0; font-weight: bold;}
+			h3 {text-align: center;}</style><body>
+<div class="container">
+		<div class="header">
+		<header><H1 align="center">Information Technology Exchange Database Health Report</H1><H2 align="center">This report was last run on 2020-11-20 at 14:49:54</H2>
+<p align="center">
+						   		<h2 align="center">Click here for past (7 day) Reports <a href="file:///\\ServerName\Web Pages\Exchange\Health Checks\Database"> here</a>.<br /></h2>
+								<b>Script Details:</b> Runs daily on <u>ServerName</u> Script Name and Location => <u>E:\companyITScripts\Exchange\Reports\DatabaseChecks\Daily-DB-Check.ps1</u>.</br>
+				   		   </p></header></div>
+
+<div class="DB_TO_DISK_SUBSYSTEM">
+
+<h2 class="DB_Header_Focus">Databases to Exchange Server Disk Subsystem</h2>
+<TABLE align="center">
+
+<thead>
+
+<tr>
+
+<th class="summary" title="DB Name" rowspan="2">Server Name</th>
+
+<th class="summary" title="" rowspan="2">DB Name</th>
+
+<th class="summary" title="" rowspan="2">DB Size</th>
+
+<th class="summary" title=" " rowspan="2">DB Free Space</th>
+
+<th class="summary" title="" colspan="4" align="center">DB Data File Physical Drive Details</th>
+
+<th class="summary" title="" colspan="4" align="center">DB Log File Physical Drive Details</th>
+
+</tr>
+
+<tr>
+
+<th class="summary" title="">Drive Letter</th>
+
+<th class="summary" title="">Capacity (GB)</th>
+
+<th class="summary" title="">Free(GB)</th>
+
+<th class="summary" title="">Free (&#37;)</th>
+
+<th class="summary" title="">Drive Letter</th>
+
+<th class="summary" title="">Capcity (GB)</th>
+
+<th class="summary" title="">Free (GB)</th>
+
+<th class="summary" title="">Free (&#37;)</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>1168-EXCHSVR1</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">601.8</td><td align="center">579.0</td><td align="center" bgcolor="#33ffb1">96%</td><td align="center">E:\</td><td align="center">601.8</td><td align="center">579.0</td><td align="center" bgcolor="#33ffb1">96%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.21 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.219 GB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">173.0</td><td align="center" bgcolor="#ff3347">26%</td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">180.1</td><td align="center" bgcolor="#33ffb1">30%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">Mailbox Database 0760981758</td><td align="right">247.9 MB </td><td align="right">75.84 MB </td><td align="center">D:\</td><td align="center">149.9</td><td align="center">84.9</td><td align="center" bgcolor="#33ffb1">57%</td><td align="center">D:\</td><td align="center">149.9</td><td align="center">84.9</td><td align="center" bgcolor="#33ffb1">57%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.21 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.219 GB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">291.2</td><td align="center" bgcolor="#33ffb1">48%</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">136.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.209 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.219 GB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td><td align="center">E:\</td><td align="center">675.9</td><td align="center">135.0</td><td align="center" bgcolor="#ff3347">20%</td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">601.9</td><td align="center">284.0</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.209 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.219 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">72.8</td><td align="center" bgcolor="#ff3347">12%</td></tr>
+
+<tr><td>EXCHSVR1</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">237.9</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.209 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.218 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">85.0</td><td align="center" bgcolor="#ff3347">15%</td></tr>
+
+<tr><td>EXCHSVR2</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">246.5</td><td align="center" bgcolor="#33ffb1">47%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.209 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">73.8</td><td align="center" bgcolor="#ff3347">13%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.217 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">238.3</td><td align="center" bgcolor="#33ffb1">46%</td></tr>
+
+<tr><td>EXCHSVR3</td><td align="center">twahl</td><td align="right"></td><td align="right"></td><td align="center">Z:\</td><td align="center">250.0</td><td align="center">146.3</td><td align="center" bgcolor="#33ffb1">59%</td><td align="center">Z:\</td><td align="center">250.0</td><td align="center">146.3</td><td align="center" bgcolor="#33ffb1">59%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData8</td><td align="right">2.25 GB </td><td align="right">169.3 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData6</td><td align="right">49.25 GB </td><td align="right">2.413 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData2</td><td align="right">78.63 GB </td><td align="right">209.1 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData4</td><td align="right">59.25 GB </td><td align="right">1.86 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MDataTest</td><td align="right">16.75 GB </td><td align="right">898.6 MB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData7</td><td align="right">49.25 GB </td><td align="right">294.1 MB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData3</td><td align="right">124.8 GB </td><td align="right">5.209 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData1</td><td align="right">180.9 GB </td><td align="right">15.48 GB </td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td><td align="center">E:\</td><td align="center">585.9</td><td align="center">46.2</td><td align="center" bgcolor="#33ffb1">8%</td></tr>
+
+<tr><td>EXCHSVR4</td><td align="center">MData5</td><td align="right">142.4 GB </td><td align="right">3.216 GB </td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td><td align="center">F:\</td><td align="center">521.9</td><td align="center">220.7</td><td align="center" bgcolor="#33ffb1">42%</td></tr>
+
+</tbody>
+
+</TABLE>
+
+</div>
+
+<div class="active_DBS">
+
+<h2 class="DB_Header_Focus">Database Mount Location and Backup History</h2>
+<TABLE align="center">
+
+<thead>
+
+<tr>
+
+<th class="summary" title="DB Name">Name</th>
+
+<th class="summary" title="Server this Active DB is mounted on">Mounted On Server</th>
+
+<th class="summary" title="Time Stamp of Last Full Backup taken from Enterprise Backup Software. (Green = Backed up within 24 hours RED = Not Backed up within 24 hours">Last Full Backup</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>Mailbox Database 0760981758</td><td>1168-EXCHSVR3.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:35</td></tr>
+
+<tr><td>MData1</td><td>EXCHSVR1.company.org</td><td bgcolor="#ff3347">11/19/2020 23:30:48</td></tr>
+
+<tr><td>MData2</td><td>EXCHSVR2.company.org</td><td bgcolor="#ff3347">11/19/2020 23:30:49</td></tr>
+
+<tr><td>MData3</td><td>EXCHSVR1.company.org</td><td bgcolor="#ff3347">11/19/2020 23:30:57</td></tr>
+
+<tr><td>MData4</td><td>EXCHSVR2.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:05</td></tr>
+
+<tr><td>MData5</td><td>EXCHSVR1.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:09</td></tr>
+
+<tr><td>MData6</td><td>EXCHSVR2.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:18</td></tr>
+
+<tr><td>MData7</td><td>1168-EXCHSVR3.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:35</td></tr>
+
+<tr><td>MData8</td><td>EXCHSVR2.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:28</td></tr>
+
+<tr><td>MDataTest</td><td>EXCHSVR2.company.org</td><td bgcolor="#ff3347">11/19/2020 23:31:35</td></tr>
+
+<tr><td>twahl</td><td>EXCHSVR3.company.org</td><td bgcolor="#ff3347">N/A or Never Backed up</td></tr>
+
+</tbody>
+
+</TABLE>
+
+</div>
+<div class="passive_DBS">
+
+<h2 class="DB_Header_Focus">Database Copy Status</h2>
+<TABLE>
+
+<thead>
+
+<tr>
+
+<th class="summary" title="DB Copy Name and Server we are reporting on">DB Copy &amp; Server</th>
+
+<th class="summary" title="Status of the DB copy during time of this report">Status</th>
+
+<th class="summary" title="Indicates the number of log files waiting to be copied to the selected database copy. This field is relevant only for passive database copies.">Copy in Queue</th>
+
+<th class="summary" title="Indicates the number of log files waiting to be replayed into the selected database copy. This field is relevant only for passive database copies. DOUBLE-DIGIT VALUES WILL BE HIGHLIGHTED IN RED AS THESE NEED TO BE INVESTIGATED! ">Replay in Queue</th>
+
+<th class="summary" title="Displays the date and time stamp of the last log file that was inspected by the LogInspector on the selected database copy. This field is relevant only for passive database copies. On active database copies (replicated and stand-alone), this field will display never.">Last inspected Time</th>
+
+<th class="summary" title="">Current Replay Log Time</th>
+
+<th class="summary" title="">Latest Available Log Time</th>
+
+<th class="summary" title="">Last Copied Log Time</th>
+
+<th class="summary" title="">Last Replayed Log Time</th>
+
+<th class="summary" title="">Activation Preference</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>MDataTest\1168-EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td align="right">8</td></tr>
+
+<tr><td>MData1\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">2167705</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">5</td></tr>
+
+<tr><td>MData2\1168-EXCHSVR2</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">2</td><td>11/20/2020 14:51:44</td><td>11/20/2020 14:52:15</td><td>11/20/2020 14:52:15</td><td>11/20/2020 14:52:15</td><td>11/20/2020 14:51:44</td><td align="right">5</td></tr>
+
+<tr><td>MData3\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">1390291</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">5</td></tr>
+
+<tr><td>MData4\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">2511491</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">5</td></tr>
+
+<tr><td>MData5\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">1667718</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">5</td></tr>
+
+<tr><td>MData6\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">535956</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">5</td></tr>
+
+<tr><td>MData7\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">467178</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">3</td></tr>
+
+<tr><td>MData8\1168-EXCHSVR2</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td align="right">5</td></tr>
+
+<tr><td>MDataTest\1168-EXCHSVR2</td><td bgcolor="#ff3347">Seeding</td><td align="center">263494</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">1</td></tr>
+
+<tr><td>MData1\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:51:56</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:51:56</td><td align="right">6</td></tr>
+
+<tr><td>MData2\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">3</td><td>11/20/2020 14:51:44</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:51:44</td><td align="right">6</td></tr>
+
+<tr><td>MData3\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:51:50</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:51:50</td><td align="right">6</td></tr>
+
+<tr><td>MData4\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td align="right">6</td></tr>
+
+<tr><td>MData5\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td align="right">6</td></tr>
+
+<tr><td>MData6\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td align="right">6</td></tr>
+
+<tr><td>MData8\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td align="right">6</td></tr>
+
+<tr><td>MDataTest\1168-EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td align="right">6</td></tr>
+
+<tr><td>MData1\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td align="right">7</td></tr>
+
+<tr><td>MData2\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">3</td><td>11/20/2020 14:51:44</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:51:44</td><td align="right">7</td></tr>
+
+<tr><td>MData3\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:51:50</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:51:50</td><td align="right">7</td></tr>
+
+<tr><td>MData4\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td align="right">7</td></tr>
+
+<tr><td>MData5\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td align="right">7</td></tr>
+
+<tr><td>MData6\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td align="right">7</td></tr>
+
+<tr><td>MData7\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td align="right">2</td></tr>
+
+<tr><td>MData8\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td align="right">7</td></tr>
+
+<tr><td>MDataTest\1168-EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td align="right">7</td></tr>
+
+<tr><td>MData2\EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">3</td><td>11/20/2020 14:51:44</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:51:44</td><td align="right">2</td></tr>
+
+<tr><td>MData4\EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td align="right">2</td></tr>
+
+<tr><td>MData6\EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:06</td><td align="right">2</td></tr>
+
+<tr><td>MData7\EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td align="right">4</td></tr>
+
+<tr><td>MData8\EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td align="right">2</td></tr>
+
+<tr><td>MDataTest\EXCHSVR1</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td align="right">3</td></tr>
+
+<tr><td>MData1\EXCHSVR2</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td align="right">2</td></tr>
+
+<tr><td>MData3\EXCHSVR2</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:51:50</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:51:50</td><td align="right">2</td></tr>
+
+<tr><td>MData5\EXCHSVR2</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td align="right">2</td></tr>
+
+<tr><td>MData7\EXCHSVR2</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td align="right">5</td></tr>
+
+<tr><td>MData1\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td align="right">3</td></tr>
+
+<tr><td>MData2\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">3</td><td>11/20/2020 14:51:44</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:51:44</td><td align="right">4</td></tr>
+
+<tr><td>MData3\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:51:50</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:51:50</td><td align="right">3</td></tr>
+
+<tr><td>MData4\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td align="right">4</td></tr>
+
+<tr><td>MData5\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td align="right">3</td></tr>
+
+<tr><td>MData6\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:25</td><td>11/20/2020 14:52:25</td><td>11/20/2020 14:52:25</td><td>11/20/2020 14:52:06</td><td align="right">4</td></tr>
+
+<tr><td>MData7\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td align="right">6</td></tr>
+
+<tr><td>MData8\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td align="right">4</td></tr>
+
+<tr><td>MDataTest\EXCHSVR3</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td align="right">4</td></tr>
+
+<tr><td>twahl\EXCHSVR3</td><td bgcolor="#ff3347">Dismounted</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td></td><td></td><td></td><td></td><td></td><td align="right">1</td></tr>
+
+<tr><td>MData1\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td>11/20/2020 14:52:11</td><td align="right">4</td></tr>
+
+<tr><td>MData2\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td>11/20/2020 14:52:16</td><td align="right">3</td></tr>
+
+<tr><td>MData3\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:51:50</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:52:18</td><td>11/20/2020 14:51:50</td><td align="right">4</td></tr>
+
+<tr><td>MData4\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td>11/20/2020 14:50:54</td><td align="right">3</td></tr>
+
+<tr><td>MData5\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td>11/20/2020 14:52:07</td><td align="right">4</td></tr>
+
+<tr><td>MData6\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">1</td><td>11/20/2020 14:52:06</td><td>11/20/2020 14:52:25</td><td>11/20/2020 14:52:25</td><td>11/20/2020 14:52:25</td><td>11/20/2020 14:52:06</td><td align="right">3</td></tr>
+
+<tr><td>MData7\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td>11/20/2020 14:51:53</td><td align="right">7</td></tr>
+
+<tr><td>MData8\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td>11/20/2020 14:47:44</td><td align="right">3</td></tr>
+
+<tr><td>MDataTest\EXCHSVR4</td><td bgcolor="#33ffb1">Healthy</td><td align="center">0</td><td bgcolor="#33ffb1" align="center">0</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td>11/20/2020 14:49:34</td><td align="right">5</td></tr>
+
+</tbody>
+
+</TABLE>
+
+</div>
+<div class="replication_Results">
+
+<h2 class="DB_Header_Focus">Database Replication Health Check</h2>
+<TABLE>
+
+<thead>
+
+<tr>
+
+<th class="summary" title="Exchange Server">Server</th>
+
+<th class="summary" title="Replication Health Check on Service Component">Replication Check</th>
+
+<th class="summary" title="Health Check Result for Service Component">Result</th>
+
+<th class="summary" title="If result is other than passed, text will be prosented about result condition">Error</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>1168-EXCHSVR1</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>ClusterNetwork</td><td bgcolor="#ff3347">*FAILED*</td><td>Network 'ReplicationDagNetwork01' has no network interface for server 'EXCHSVR1'. Correct the physical network configuration so that each Mailbox server has exactly one interface on each subnet. Then use Set-DatabaseAvailabilityGroup with the -DiscoverNetworks parameter to configure the database availability group networks.
+</td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR1</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR2</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DatabaseRedundancy</td><td bgcolor="#ff3347">*FAILED*</td><td>There were database redundancy check failures for database 'Mailbox Database 0760981758' that may be lowering its redundancy and putting the database at risk of data loss. Redundancy Count: 1. Expected Redundancy Count: 2. Detailed error(s): 
+
+
+        1168-EXCHSVR1:
+        Database 'Mailbox Database 0760981758' does not have enough copies configured to meet the validation criteria.
+        
+</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DatabaseAvailability</td><td bgcolor="#ff3347">*FAILED*</td><td>There were database availability check failures for database 'Mailbox Database 0760981758' that may be lowering its availability. Availability Count: 1. Expected Availability Count: 2. Detailed error(s): 
+
+
+        1168-EXCHSVR1:
+        Database 'Mailbox Database 0760981758' does not have enough copies configured to meet the validation criteria.
+        
+</td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR3</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>1168-EXCHSVR4</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR1</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR2</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR3</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>ClusterService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>ReplayService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>ActiveManager</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>TasksRpcListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>TcpListener</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>ServerLocatorService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DagMembersUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>MonitoringService</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>ClusterNetwork</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>QuorumGroup</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>FileShareQuorum</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DatabaseRedundancy</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DatabaseAvailability</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DBCopySuspended</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DBCopyFailed</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DBInitializing</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DBDisconnected</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DBLogCopyKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+<tr><td>EXCHSVR4</td><td>DBLogReplayKeepingUp</td><td bgcolor="#33ffb1">Passed</td><td></td></tr>
+
+</tbody>
+
+</TABLE>
+
+</div>
+
