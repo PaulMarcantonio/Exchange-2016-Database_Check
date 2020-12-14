@@ -47,7 +47,7 @@
           </ul>
  <strong><u>Installation</u>:</strong>
      <br/>&nbsp;&nbsp;&nbsp;&nbsp;Make sure Powershell version 3 or above is installed on the server (Server Role and Features (Windows Powershell)
-     <br/>&nbsp;&nbsp;&nbsp;&nbsp;Domain Administrator Powershell is activated on Server running the script by Roles and Features or running "Import-Module ServerManagerAdd-WindowsFeature RSAT-AD-PowerShell"
+     <br/>&nbsp;&nbsp;&nbsp;&nbsp;Install Exchange 2016 Management tools https://docs.microsoft.com/en-us/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools?view=exchserver-2019
      
 <strong><u>Contributing</u>:</strong>
     <br/>&nbsp;&nbsp;&nbsp;&nbsp;None
