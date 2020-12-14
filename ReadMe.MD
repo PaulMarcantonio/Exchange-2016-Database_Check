@@ -30,7 +30,7 @@
 		<li>DB Copy Status (across all servers)</li>
 		<li>DB Replication Health Check (across all servers)</li>
 	</ul>
-	<br/>&nbsp;&nbsp;&nbsp;&nbsp;Send Email to team with html table results and HTML file attachement
+	&nbsp;&nbsp;&nbsp;&nbsp;Send Email to team with html table results and HTML file attachement
 
 <strong><u>Pre-Condition(s)</u>:</strong>
      <br/>&nbsp;&nbsp;&nbsp;&nbsp;Powershell Execution Policy set to Remove Signed (Get-ExecutionPolicy, Set-ExecutionPolicy RemoteSigned)
