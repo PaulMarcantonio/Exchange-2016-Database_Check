@@ -2,7 +2,7 @@
 <strong><u>Description</u>:</strong> 
   <br/>&nbsp;&nbsp;&nbsp;&nbsp;Exchange Database Health Check  
   
-<strong><u>Useage</u>:</strong> 
+<strong><u>Usage</u>:</strong> 
   <br/>&nbsp;&nbsp;&nbsp;&nbsp;Can be launched in a Powershell session on a system that has Exchange Shell also installed on the System. Also great as a task manager task to run on schedule. This will provide some key insight on Db backup status, Mount locations and more.
 
 <strong><u>Programmer</u>:</strong>
